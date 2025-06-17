@@ -161,7 +161,7 @@ namespace BATTLECAT
             return false; // Target was not found in the stack
         }
 
-    } // end MyScript
+    } // end MenuStackManager
 
 } // end namespace BATTLECAT
 //                    ^           ^
