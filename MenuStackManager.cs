@@ -174,6 +174,8 @@ namespace BATTLECAT
             }
 
             // Whether we find the target or not, we still rebuild the stack
+            // Note: 'stack' is a reference to the original Stack<GameObject> passed in,
+            // so this modifies the actual stack, not a copy.
             while (tempStack.Count > 0)
             {
                 stack.Push(tempStack.Pop());
