@@ -34,18 +34,14 @@ namespace BATTLECAT
         {
             if (menuStack.Count > 0)
             {
-                // Get and remove the top menu from the stack
-                var top = menuStack.Pop();
-
-                // Deactivate that menu
-                top.SetActive(false);
-                Debug.Log($"{top.name} is now closed.");
+                var top = menuStack.Peek(); // Don't pop here
+                CloseMenu(top); // CloseMenu will pop it
             }
             else
             {
                 Debug.Log("No menus left to close.");
             }
-        }         
+        }        
         
         public void OpenMenu(GameObject menu)
         {
